@@ -13,13 +13,22 @@ public struct TabBarItem {
     let selectedIcon: Image
     let color: Color
     let content: any View
+    let contentIgnoresSafeArea: Bool
     
-    public init(name: String, icon: Image, selectedIcon: Image, color: Color, content: any View) {
+    public init(
+        name: String,
+        icon: Image,
+        selectedIcon: Image,
+        color: Color,
+        content: any View,
+        contentIgnoresSafeArea: Bool = false
+    ) {
         self.name = name
         self.icon = icon
         self.selectedIcon = selectedIcon
         self.color = color
         self.content = content
+        self.contentIgnoresSafeArea = contentIgnoresSafeArea
     }
 }
 
