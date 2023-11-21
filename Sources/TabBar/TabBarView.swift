@@ -72,7 +72,9 @@ public struct TabBarView: View {
                         )
                     )
                     .isHidden(!isSelected(index))
+                    .padding(.bottom, items[index].contentIgnoresSafeArea ? 0 : safeAreaInsets.bottom + 20)
             }
         }
+//        .padding(.bottom, safeAreaInsets.bottom + 20)
     }
 }
